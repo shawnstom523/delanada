@@ -1,0 +1,170 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Reports | De La Nada (DEV)</title>
+   <link rel="stylesheet" href="/css/main.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,800;1,400&family=Poppins:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+   <nav class="navbar navbar-fixed-top">
+      <a class="navbar-brand" href="#"><i class="fa-light fa-chart-network"></i></i>DE LA NADA</a>
+      <div class="nav-right">
+         <div class="nav-title"><span>The ABC Company</span></div>
+         <div class="log-out"><a href="/login.html">LOG OUT <i class="fal fa-arrow-alt-to-right"></i></a></div>
+      </div>
+   </nav>
+</head>
+
+<!-- BODY -->
+<body>
+   <div class="main-wrapper">
+      <div class="main-inner">
+         <!-- Admin Bar -->
+         <div class="admin-wrapper">
+            <nav class="nav nav-admin flex-column">
+               <a class="nav-link active" href="/index.html">
+                  <i class="fa-light fa-chart-pie"></i>
+                  <span>Reports</span>
+               </a>
+               <a class="nav-link" href="/qb-fields.html">
+                  <i class="fal fa-file-alt"></i>
+                  <span>QB Fields</span>
+               </a>
+               <a class="nav-link" href="/settings.html">
+                  <i class="fal fa-cog"></i>
+                  <span>Settings</span>
+               </a>
+               <div class="nav-divider"></div>
+               <a class="nav-link" href="/login.html">
+                  <i class="fal fa-user-lock"></i>
+                  <span>Admin</span>
+               </a>
+             </nav>
+            <div class="admin-menu">
+            </div>
+         </div>
+         <!-- Table Content -->
+         <div class="table-content">
+            <div class="row alert-banner">
+               <div class="alert alert-warning fade show" role="alert">
+                  <div class="alert-message">
+                     <i class="fal fa-exclamation-triangle"></i> Your quickbooks token has expired. Click to reconnect
+                  </div>
+                  <button type="button" class="alert-close" data-bs-dismiss="alert" aria-label="Close"><i class="fa-regular fa-xmark"></i></button>
+                </div>
+            </div>
+            <div class="row">
+               <h1 class="p-0"><i class="fa-light fal fa-file-alt"></i> Settings</h1>
+            </div>
+            <div class="row">
+               <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="nav-prism-tab" data-bs-toggle="tab" data-bs-target="#nav-prism" type="button" role="tab" aria-controls="nav-prism" aria-selected="true">Prism HR Settings</button>
+                  <button class="nav-link" id="nav-departments-tab" data-bs-toggle="tab" data-bs-target="#nav-departments" type="button" role="tab" aria-controls="nav-departments" aria-selected="false">QuickBook Settings</button>
+               </div>
+               </nav>
+               <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-prism" role="tabpanel" aria-labelledby="nav-home-tab">
+                     <!-- Prism HR Settings Fields -->
+                     <form>
+                        <div class="form-group col-md-6">
+                          <label for="prismUserName">Prism API Username <span>*</span></label>
+                          <input type="text" class="form-control" id="prismUserName">
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label for="prismPassword">Prism API Password <span>*</span></label>
+                           <input type="text" class="form-control" id="prismPassword">
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label for="peoId">PEO ID <span>*</span></label>
+                           <input type="text" class="form-control" id="peoId">
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label for="prismVersion">Prism API Version <span>*</span></label>
+                           <select class="form-control" id="prismVersion">
+                             <option>1.0</option>
+                             <option>1.1</option>
+                             <option>1.2</option>
+                           </select>
+                         </div>
+                         <div class="form-group col-md-6">
+                           <label for="inputEmail">Email to Send Report <span>*</span></label>
+                           <input type="email" class="form-control" id="inputEmail">
+                         </div>
+                         <div>
+                           <button class="test-connection">Test Connection</button>
+                         </div>
+                         <button type="submit" class="submit btn btn-primary">Save Changes</button>
+                      </form>
+                  </div>
+                  <div class="tab-pane fade" id="nav-departments" role="tabpanel" aria-labelledby="nav-profile-tab">
+                     <form>
+                        <div class="form-group col-md-6">
+                          <label for="clientID">Client ID <span>*</span></label>
+                          <input type="text" class="form-control" id="clientID">
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label for="clientSecret">Client Secret <span>*</span></label>
+                           <input type="text" class="form-control" id="clientSecret">
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label for="companyID">Company ID from Prism HR <span>*</span></label>
+                           <input type="text" class="form-control" id="companyID">
+                        </div>
+                        <div>
+                           <button class="test-connection">Reconnect</button>
+                         </div>
+                         <button type="submit" class="submit btn btn-primary">Save Changes</button>
+                      </form>
+                  </div>
+               </div>
+            </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body">
+         ...
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+         <button type="button" class="btn btn-primary">Save changes</button>
+       </div>
+     </div>
+   </div>
+
+
+  <!-- Run Scripts -->
+   <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous">
+   </script>
+   <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+   <script src="//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+   <script src="/js/bootstrap.min.js"></script>
+   <script src="/js/modal.js"></script>
+   <script src="/js/main.js"></script>
+   <script type='text/javascript' src='https://kit.fontawesome.com/08c960ea08.js?ver=3.7.7' id='font-awesome-pro-js'></script>
+
+
+
+
+</body>
+</html>
+
+
+
